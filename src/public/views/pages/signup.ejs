@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body>
+      <h1 class="h2 m-3 text-center">Registro de usuario</h1>
+      <form method="POST" action="/signup" class="row g-3 container justify-content-center m-auto" enctype="multipart/form-data">
+        <div class="col-md-6">
+          <label for="username" class="form-label">Email</label>
+          <input type="email" class="form-control" name="username" id="username" />
+        </div>
+        <div class="col-md-6">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+          />
+        </div>
+        <div class="col-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" name="nombre" id="nombre" />
+        </div>
+        <div class="col-6">
+          <label for="edad" class="form-label">Edad</label>
+          <input type="number" class="form-control" name="edad" id="edad" />
+        </div>
+        <div class="col-6">
+          <label for="direccion" class="form-label">Direccion</label>
+          <input
+            type="text"
+            class="form-control"
+            id="direccion"
+            name="direccion"
+            placeholder="1234 Main St"
+          />
+        </div>
+        <div class="col-3">
+          <p>Telefono:</p>
+          <input id="phone" type="tel" name="phone" />
+        </div>
+        <div class="col-3">
+          <label for="foto" class="form-label">Foto</label>
+          <input type="file" name="foto" id="foto" class="d-block">
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-success" value="Verify">Registrarse</button>
+        </div>
+        <div class="m-3">
+          <a class="btn btn-primary" href="/login">Iniciar sesión</a>
+        </div>
+      </form>
+      </div>
+      <div class="border border-1 container mt-3">
+
+  </body>
+  <script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  </script>
+</html>
