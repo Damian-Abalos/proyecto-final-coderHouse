@@ -1,58 +1,27 @@
-const {Router} = require("express")
-require('dotenv').config()
+const express = require("express")
+const router = express.Router()
+const carritos = require('../controllers/Carrito.controller')
+const middlewares = require('../middlewares/middlewares')
 
-const validateCarrito = require('../middlewares/validators/validatorCarrito')
+/* GET: '/' - Lista todos los carritos. */
+router.get("/", middlewares.usersAuth, carritos.listarTodos)
 
-const productos = process.env.DB == 'Firebase' ? require('../daos/productos/ProductosDaoFirebase') : require('../daos/productos/ProductosDaoMongoDB')
-const carritos = process.env.DB == 'Firebase' ? require('../daos/carritos/CarritosDaoFirebase') : require('../daos/carritos/CarritosDaoMongoDB')
+/* POST: '/' - Crea un carrito vacío  */
+router.post("/:id", middlewares.usersAuth, carritos.crearNuevoCarrito)
 
-const rutaCarrito = Router();
+/* DELETE: '/:id' - Vacía un carrito y lo elimina */
+router.delete("/:id", middlewares.usersAuth, carritos.borrarCarrito)
 
-//carrito
+/* GET: '/:id/productos' - Me permite listar todos los productos guardados en el carrito */
+router.get("/:id/productos", middlewares.usersAuth, carritos.listarCarrito)
 
-rutaCarrito.get("/", (req, res) => {
-    carritos.getAllCarts().then((resp) => res.send(resp));
-});
+/* PUT: '/:id/productos' - Para incorporar productos al carrito por su id de producto */
+router.put("/:id/productos", middlewares.usersAuth, carritos.incorporarProductoCarrito)
 
-rutaCarrito.get("/:id", (req, res) =>{
-    const id = req.params.id;
-    carritos.getById(id).then((resp) => res.send(resp));
-})
+/* DELETE: '/:id/productos/:id_prod' - Eliminar un producto del carrito por su id de carrito y de producto */
+router.delete("/:id/productos/:id_prod", middlewares.usersAuth, carritos.borrarProductoCarrito)
 
-// rutaCarrito.post('/', validateCarrito, (req, res) => {
-//     let object = req.body
-//     carritos.save(object).then(resp => res.send(resp))
-// })
+/* POST: '/:id/compra' - Para finalizar compra de productos del carrito */
+router.post("/:id/compra", middlewares.usersAuth, carritos.cierreCompra)
 
-rutaCarrito.post('/:idUser', (req, res) => {
-    let object = {"productos":[]}
-    let idUser = req.params.idUser
-    carritos.saveCart(object, idUser).then(resp => res.send(resp))
-})
-
-rutaCarrito.delete('/:id', (req, res) => {
-    const id = req.params.id
-    carritos.deleteById(id).then(resp => res.send(resp))
-})
-
-rutaCarrito.post('/:id/productos', async (req, res) => {
-    const id = req.params.id
-    const id_prod = req.body.id_prod
-    productos.getById(id_prod)
-        .then(resp => {
-            carritos.saveById(resp, id).then(respo => res.send(respo))
-        })
-})
-
-rutaCarrito.get('/:id/productos', (req, res) => {
-    const id = req.params.id
-    carritos.getProductsById(id).then(resp => res.send(resp))
-})
-
-rutaCarrito.delete('/:id/productos/:id_prod', (req, res) => {
-    const id = req.params.id
-    const id_prod = req.params.id_prod
-    carritos.updateCartById(id, id_prod).then(resp => res.send(resp))
-})
-
-module.exports = rutaCarrito
+module.exports = router;

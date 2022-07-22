@@ -10,6 +10,5 @@ const onlyAdmin = (req, res, next) => {
     });
     else next()
 }
-// console.log(isAdmin);
 
 module.exports = onlyAdmin

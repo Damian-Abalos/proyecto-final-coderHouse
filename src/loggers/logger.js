@@ -19,7 +19,7 @@ function buildProdLogger() {
       ],
       format: winston.format.combine(
         winston.format.label({
-          label: `Label🏷️`
+          label: `Label`
         }),
         winston.format.timestamp({
           format: 'MMM-DD-YYYY HH:mm:ss'

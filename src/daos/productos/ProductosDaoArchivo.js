@@ -1,8 +1,7 @@
-const config = require ('../../utils/config.js')
+const config = require ('../../config/config.js')
 
-const ContenedorArchivo = require("../../contenedores/ContenedorArchivo")
+const ContenedorArchivo = require("../contenedores/ContenedorArchivo")
 
-// const productos = new ContenedorArchivo('../DB/productos.txt')
-const productos = new ContenedorArchivo(config.fileSystem.productsPath)
+const ProductosDaoArchivo = new ContenedorArchivo(config.fileSystem.productsPath)
 
-module.exports =  productos
+module.exports =  ProductosDaoArchivo

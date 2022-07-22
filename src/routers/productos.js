@@ -1,37 +1,27 @@
-const {Router} = require("express")
-require('dotenv').config()
-
-const onlyAdmin = require('../middlewares/onlyAdmin')
-const validatorProductos = require('../middlewares/validators/validatorProductos')
-
-const productos = process.env.DB == 'Firebase' ? require('../daos/productos/ProductosDaoFirebase') : require('../daos/productos/ProductosDaoMongoDB')
-
-const rutaProductos = Router();
+const express = require("express")
+const router = express.Router()
+const productos = require('../controllers/Producto.controller')
+const middlewares = require('../middlewares/middlewares')
+const validations = require('../middlewares/validations')
 
 //productos
 
-rutaProductos.get("/", (req, res) => {
-    productos.getAll().then((resp) => res.send(resp));
-});
+// Obtener productos 
+router.get("/", middlewares.usersAuth, productos.getAll)
 
-rutaProductos.get("/:id", (req, res) => {
-    const id = req.params.id;
-    productos.getById(id).then((resp) => res.send(resp));
-});
+// Obtener producto por id
+router.get("/:id", middlewares.usersAuth, productos.getById)
 
-rutaProductos.post("/", validatorProductos, onlyAdmin, (req, res) => {
-    const newData = req.body;
-    productos.save(newData).then((resp) => res.send(resp));    
-});
+// Obtener productos por categoria
+router.get("/categoria/:categoria", middlewares.usersAuth, productos.getCategory)
 
-rutaProductos.put("/:id", onlyAdmin, (req, res) => {
-    let id = req.params.id;
-    productos.updateById(req.body, id).then((resp) => res.send(resp));
-});
+// Agregar producto
+router.post("/", middlewares.usersAuth, middlewares.isAdmin, middlewares.validate(validations.validationProduct), productos.save)
 
-rutaProductos.delete("/:id", onlyAdmin, (req, res) => {
-    let id = req.params.id;
-    productos.deleteById(id).then((resp) => res.send(resp));    
-});
+// Actualizar producto por id
+router.put("/:id", middlewares.usersAuth, middlewares.isAdmin, middlewares.validate(validations.validationProduct), productos.update)
 
-module.exports = rutaProductos
+// Eliminar producto por id
+router.delete("/:id", middlewares.usersAuth, middlewares.isAdmin, productos.deleteById)
+
+module.exports = router;

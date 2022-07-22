@@ -1,6 +1,5 @@
-// const config = require ('../../utils/config.js')
-const ContenedorFirebase = require("../../contenedores/ContenedorFirebase")
+const ContenedorFirebase = require("../contenedores/ContenedorFirebase")
 
-const carritos = new ContenedorFirebase('carrito')
+const CarritosDaoFirebase = new ContenedorFirebase('carrito')
 
-module.exports = carritos
+module.exports = CarritosDaoFirebase

@@ -1,7 +1,7 @@
-const config = require ('../../utils/config.js')
+const config = require ('../../config/config.js')
 
-const ContenedorArchivo = require ("../../contenedores/ContenedorArchivo")
+const ContenedorArchivo = require ("../contenedores/ContenedorArchivo")
 
-const carritos = new ContenedorArchivo(config.fileSystem.carritosPath)
+const CarritosDaoArchivo = new ContenedorArchivo(config.fileSystem.carritosPath)
 
-module.exports = carritos
+module.exports = CarritosDaoArchivo

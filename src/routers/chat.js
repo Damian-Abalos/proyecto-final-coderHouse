@@ -1,9 +1,11 @@
-const {Router} = require("express")
+const express = require("express")
+const router = express.Router()
+const chats = require('../controllers/Mensaje.controller')
+const middlewares = require('../middlewares/middlewares')
+const validations = require('../middlewares/validations')
 
-rutaChat = Router()
+router.get("/:email", middlewares.usersAuth, chats.listar)
 
-rutaChat.get('/chat', (req,res)=> {
-    res.render('pages/chat')
-})
+router.post("/", middlewares.usersAuth, middlewares.validate(validations.validationMessage), chats.guardar)
 
-module.exports = rutaChat
+module.exports = router;
