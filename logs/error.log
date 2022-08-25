@@ -1,0 +1,27 @@
+Label🏷️ error: Jul-13-2022 14:49:57 - 	Error al listar un carrito id: pepito@gmail.com
+Label🏷️ error: Aug-16-2022 13:50:34 - 	ERROR  !!!!!! El producto debe tener los siguientes campos: title, price, thumbnail y category.
+Label🏷️ error: Aug-16-2022 13:51:20 - 	ERROR  !!!!!! El producto debe tener los siguientes campos: title, price, thumbnail y category.
+Label🏷️ error: Aug-16-2022 13:51:49 - 	ERROR  !!!!!! El producto debe tener los siguientes campos: title, price, thumbnail y category.
+Label🏷️ error: Aug-16-2022 13:54:11 - 	ERROR  !!!!!! La thumbnail sólo puede contener letras, números, y /
+Label🏷️ error: Aug-16-2022 14:40:54 - 	ERROR  !!!!!! El producto debe tener los siguientes campos: title, price, thumbnail y category.
+Label🏷️ error: Aug-18-2022 15:37:27 - 	ERROR  !!!!!! La thumbnail sólo puede contener letras, números, y /
+Label🏷️ error: Aug-18-2022 16:53:57 - 	ERROR  !!!!!! La thumbnail sólo puede contener letras, números, y /
+Label🏷️ error: Aug-18-2022 16:54:35 - 	ERROR  !!!!!! La thumbnail sólo puede contener letras, números, y /
+Label🏷️ error: Aug-18-2022 16:56:26 - 	ERROR  !!!!!! La thumbnail sólo puede contener letras, números, y /
+Label🏷️ error: Aug-18-2022 16:56:43 - 	ERROR  !!!!!! La thumbnail sólo puede contener letras, números, y /
+Label🏷️ error: Aug-18-2022 16:57:30 - 	ERROR  !!!!!! La thumbnail sólo puede contener letras, números, y /
+Label🏷️ error: Aug-18-2022 16:57:55 - 	ERROR  !!!!!! La thumbnail sólo puede contener letras, números, y /
+Label🏷️ error: Aug-18-2022 16:58:37 - 	ERROR  !!!!!! La thumbnail sólo puede contener letras, números, y /
+Label🏷️ error: Aug-18-2022 17:00:49 - 	ERROR  !!!!!! La thumbnail sólo puede contener letras, números, y /
+Label🏷️ error: Aug-18-2022 17:02:20 - 	ERROR  !!!!!! La thumbnail sólo puede contener letras, números, y /
+Label🏷️ error: Aug-18-2022 17:03:12 - 	ERROR  !!!!!! caracteresValidos is not defined
+Label🏷️ error: Aug-18-2022 18:21:50 - 	ERROR  !!!!!! El producto debe tener los siguientes campos: title, price, thumbnail y category.
+Label🏷️ error: Aug-18-2022 18:26:06 - 	[object Object]
+Label🏷️ error: Aug-18-2022 18:26:06 - 	Error, no se encontró producto id: Remeras
+Label🏷️ error: Aug-18-2022 18:26:36 - 	Error, no hay productos categoria: Remeras
+Label🏷️ error: Aug-18-2022 23:19:26 - 	ERROR  !!!!!! Failed to lookup view "infoUser" in views directory "public\views"
+Label🏷️ error: Aug-19-2022 00:14:58 - 	Error, no se encontró carrito cliente: damian.vegtech@hotmail.com
+Label🏷️ error: Aug-23-2022 12:50:27 - 	ERROR  !!!!!! Cannot set headers after they are sent to the client
+Label🏷️ error: Aug-23-2022 14:10:19 - 	ERROR  !!!!!! after is not defined
+Label🏷️ error: Aug-23-2022 14:12:18 - 	ERROR  !!!!!! after is not defined
+Label🏷️ error: Aug-23-2022 14:12:32 - 	ERROR  !!!!!! after is not defined

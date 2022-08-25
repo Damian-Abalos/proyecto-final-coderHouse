@@ -1,0 +1,46 @@
+<div style="position: sticky; top: 0; z-index:100;">
+    <!-- Header -->
+    <div class="d-flex justify-content-between bg-primary p-3">
+        <div class="d-flex">
+            <img class="bg-info mr-4" src="{{avatar}}" alt="usuario"
+                style="width: 60px; height: 60px; border-radius: 50%" />
+            <h1 style="color: rgb(255, 255, 255)" class="m-auto">Bienvenido {{nombre}} </h1>
+        </div>
+        <div class="btn-group align-items-center p-3">
+            <a type="button" class="btn btn-info" href="/">Productos</a>
+            <a type="button" class="btn btn-info" href="/cart"><i class="fas fa-shopping-cart"></i></a>
+
+            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="visually-hidden"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/infoUser">Info</a></li>
+                <li><a class="dropdown-item" href="/chat">chat</a></li>
+                <li><a class="dropdown-item" href="/fired">Desloguearse</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Vista de los Productos -->
+    <div id="productos" class=" bg-dark py-2">
+        <h2 style="color: rgb(255, 255, 255)" class="text-center">Productos</h2>
+        <div class="w-100 d-flex justify-content-center">
+            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="visually-hidden">Filtrar</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><button class="dropdown-item" onclick="filtrarTodos()">Todos</button></li>
+                <li><button class="dropdown-item" onclick="filtrarRemeras()">Remeras</button></li>
+                <li><button class="dropdown-item" onclick="filtrarPantalones()">Pantalones</button></li>
+                <li><button class="dropdown-item" onclick="filtrarMedias()">Medias</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="productos" class=" bg-dark py-2">
+    <div id="tableProducts" class="row px-2 w-100 m-auto"></div>
+</div>
+
+<script src="js/mainCli.js"></script>

@@ -1,0 +1,85 @@
+<!-- Ingreso de datos -->
+<div class="container my-3">
+    <div class="jumbotron">
+        <h1 style="color: blue;">Registro de Usuario</h1>
+        <br>
+        <div class="container my-3">
+            <form class="row g-3 container justify-content-center m-auto" id="form" action="/register" method="post"
+                role="form" autocomplete="off">
+                {{!-- <div class="col-md-6 mb-2">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="email" placeholder="email" class="form-control" type="email"
+                        required="required">
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label for="password" class="form-label">Password</label>
+                    <input id="password" name="password" placeholder="password" class="form-control" type="password"
+                        required="required">
+                </div>
+                <div class="col-6 mb-2">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input id="nombre" name="nombre" placeholder="nombre" class="form-control" type="text"
+                        required="required">
+                </div>
+                <div class="col-6 mb-2">
+                    <label for="edad" class="form-label">Edad</label>
+                    <input id="edad" name="edad" placeholder="edad" class="form-control" type="number"
+                        required="required">
+                </div>
+                <div class="col-6 mb-2">
+                    <label for="direccion" class="form-label">Direccion</label>
+                    <input id="direccion" name="direccion" placeholder="direccion" class="form-control" type="text"
+                        required="required">
+                </div>
+                <div class="col-3 mb-2">
+                    <label for="celular" class="form-label">Telefono:</label>
+                    <input id="celular" name="celular" placeholder="teléfono" class="form-control" type="tel"
+                        required="required">
+                </div>
+                <div class="col-3 mb-2">
+                    <label for="foto" class="form-label">Foto</label>
+                    <input id="avatar" name="avatar" placeholder="foto" class="form-control" type="text"
+                        required="required">
+                </div>
+                <div class="col-12 mb-2">
+                    <input class="btn btn-success my-3" type="submit" value="Register">
+                </div> --}}
+                <div class="form-group">
+                    <input id="email" name="email" placeholder="email" class="form-control" type="email"
+                        required="required">
+                </div>
+                <div class="form-group">
+                    <input id="nombre" name="nombre" placeholder="nombre" class="form-control" type="text"
+                        required="required">
+                </div>
+                <div class="form-group">
+                    <input id="direccion" name="direccion" placeholder="direccion" class="form-control" type="text"
+                        required="required">
+                </div>
+                <div class="form-group">
+                    <input id="edad" name="edad" placeholder="edad" class="form-control" type="number"
+                        required="required">
+                </div>
+                <div class="form-group">
+                    <input id="celular" name="celular" placeholder="celular" class="form-control" type="tel"
+                        required="required">
+                </div>
+                <div class="form-group">
+                    <input id="avatar" name="avatar" placeholder="avatar" class="form-control" type="text"
+                        required="required">
+                </div>
+                <div class="form-group">
+                    <input id="password" name="password" placeholder="password" class="form-control" type="password"
+                        required="required">
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-success my-3" type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center m-auto">
+            <a class="btn btn-primary" href="/login">Ir a Login</a>
+        </div>
+    </div>
+</div>

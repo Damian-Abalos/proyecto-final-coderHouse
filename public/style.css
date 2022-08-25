@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+}
+.img-productos{
+
+    max-height: 490px;
+}
+@media (max-width: 1200px) {
+    .img-productos{
+        max-height: 328px;
+    }
+  }
+@media (max-width: 990px) {
+    .img-productos{
+        max-height: 328px;
+    }
+  }
