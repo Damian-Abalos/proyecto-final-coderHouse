@@ -27,9 +27,6 @@ npm install
 ```bash
 node server
 ```
-4. Vaya a localhost:8080 para registrarse. Luego inicie sesión para acceder a las vistas. 
-
-5.  Para probar los endpoints de productos, carritos y pedidos, lea la [Documentación de Endpoints](https://documenter.getpostman.com/view/18076825/UzJQqujM )
 
 
 
