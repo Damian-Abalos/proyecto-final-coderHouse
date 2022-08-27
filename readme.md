@@ -39,7 +39,7 @@ node server
  - **MongoDB**      : NOSql Database
  - **Mongoose**     : library that creates a connection between MongoDB and Express
  - **Nodemailer**   : Mail manager
- - **EJS**          : templating language for the sing up, login views
+ - **HBS**          : templating language for the sing up, login views
  - **JWT**          : Authorization token generator
  - **Bcrypt**       : password encryptor
  - **Socket.io**    : library for real-time web applications. Used for the chat
