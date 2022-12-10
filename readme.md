@@ -2,7 +2,7 @@
 
 * Damian Abalos
 ## Deploy
-[Heroku App](https://final-backend-abalos.herokuapp.com)
+[Netlify App](https://proyecto-final-coderhouse-abalos.netlify.app/)
 
 ## Consigna
 [Project guidelines](https://docs.google.com/document/d/1XmStDW5LJFpTN-yaMuVK09rrYmjMLOwZPrHTUE2jLIM/edit?usp=sharing)
